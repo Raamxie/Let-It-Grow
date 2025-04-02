@@ -1,0 +1,34 @@
+name: Start Issue
+
+on:
+    issues:
+        types: [assigned]
+
+jobs:
+  update-project-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Current Date
+        id: date
+        run: echo "date=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+
+      - name: Update Project Field
+        env:
+          GH_TOKEN: ${{ secrets.RX_PAT }}
+          ISSUE_ID: ${{ github.event.issue.node_id }}
+          PROJECT_ID: "PVT_kwHOBD1pUc4A0LJt"
+          FIELD_ID: "PVTF_lAHOBD1pUc4A0LJtzgp2fA0"
+        run: |
+          gh api graphql -f query='
+          mutation {
+            updateProjectV2ItemFieldValue(
+              input: {
+                projectId: "${{ env.PROJECT_ID }}"
+                itemId: "${{ env.ISSUE_ID }}"
+                fieldId: "${{ env.FIELD_ID }}"
+                value: { text: "${{ env.date }}" }
+              }
+            ) {
+              clientMutationId
+            }
+          }'

@@ -1,0 +1,30 @@
+name: Remove Date Finished on Issue Reopen
+
+on:
+  issues:
+    types: [reopened]
+
+jobs:
+  update-project-remove-date-finished:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove Date Finished Field
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          ISSUE_ID: ${{ github.event.issue.node_id }}
+          PROJECT_ID: "PVT_kwHOBD1pUc4A0LJt"
+          FIELD_ID: "PVTF_lAHOBD1pUc4A0LJtzgp2fEA"
+        run: |
+          gh api graphql -f query='
+          mutation {
+            updateProjectV2ItemFieldValue(
+              input: {
+                projectId: "${{ env.PROJECT_ID }}"
+                itemId: "${{ env.ISSUE_ID }}"
+                fieldId: "${{ env.FIELD_ID }}"
+                value: { text: "" }  # Clear the value of the Date Finished field
+              }
+            ) {
+              clientMutationId
+            }
+          }'
