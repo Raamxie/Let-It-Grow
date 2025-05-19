@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbope8hrhboj"]
+
+[ext_resource type="Texture2D" uid="uid://l86s8bqm01cp" path="res://resources/background.jpg" id="1_wtcfe"]
+
+[node name="Node" type="Node2D"]
+position = Vector2(52, -523)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(30, 797)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(518, 843)
+texture = ExtResource("1_wtcfe")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

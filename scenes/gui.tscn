@@ -1,9 +1,153 @@
-[gd_scene format=3 uid="uid://dvolddoyr8mpj"]
+[gd_scene load_steps=2 format=3 uid="uid://dvolddoyr8mpj"]
+
+[ext_resource type="Texture2D" uid="uid://l86s8bqm01cp" path="res://resources/background.jpg" id="1_efmwq"]
 
 [node name="Gui" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 31.0
+offset_right = -6.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(971, 511)
+scale = Vector2(2.23455, 3.2)
+texture = ExtResource("1_efmwq")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = -1
+offset_left = 76.0
+offset_top = 43.0
+offset_right = 1874.0
+offset_bottom = 177.0
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.447
+anchor_top = 0.825
+anchor_right = 0.571
+anchor_bottom = 0.932
+offset_left = 7.75995
+offset_top = 22.9999
+offset_right = 0.679932
+offset_bottom = 0.439941
+text = "aaaa"
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.702
+anchor_bottom = 0.628
+offset_left = 581.0
+offset_top = 154.0
+offset_right = 44.1599
+offset_bottom = 222.76
+size_flags_horizontal = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+size_flags_stretch_ratio = 8.87
+text = "Zaznamenat vodu"
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 204.0
+offset_top = 65.0
+offset_right = 1771.0
+offset_bottom = 980.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.85
+text = "3dcl"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.85
+text = "5dcl"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.85
+text = "10dcl"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.85
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+placeholder_text = "Zadajte si kolko chcete"
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.09
