@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://vmfekgreliu5"]
+
+[ext_resource type="PackedScene" uid="uid://dvolddoyr8mpj" path="res://scenes/gui.tscn" id="1_rvslj"]
+[ext_resource type="PackedScene" uid="uid://b2rj8yrw5kbsv" path="res://scenes/Flower.tscn" id="2_rvslj"]
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0.00023769, -0.000261715, -0.000237659, 1, 0.000149837, 0.000261743, -0.000149787, 1, 0, 0, 0)
+
+[node name="Gui" parent="." instance=ExtResource("1_rvslj")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 4.75848e-09, 8.96398e-09, 2.98428e-13, 0.940881, 0.338738, 0, -0.338738, 0.940881, 0.126688, 4.00279, 7.31917)
+keep_aspect = 0
+current = true
+fov = 45.5
+size = 0.081
+
+[node name="Flower" parent="." instance=ExtResource("2_rvslj")]
