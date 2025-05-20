@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://qs34pm8ry453"]
+
+[ext_resource type="Texture2D" uid="uid://dalruc5dg2cgf" path="res://assets/icons/glass.svg" id="1_so0j1"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture_normal = ExtResource("1_so0j1")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Yatta"
+horizontal_alignment = 1

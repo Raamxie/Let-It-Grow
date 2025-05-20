@@ -1,10 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://vmfekgreliu5"]
 
+[ext_resource type="Script" uid="uid://dxjkhjm1pos16" path="res://scripts/main.gd" id="1_rarhs"]
 [ext_resource type="PackedScene" uid="uid://dvolddoyr8mpj" path="res://scenes/gui.tscn" id="1_rvslj"]
 [ext_resource type="PackedScene" uid="uid://c64k806i1ta3x" path="res://scenes/flower.tscn" id="2_rvslj"]
 [ext_resource type="Script" uid="uid://c0pdiwij4arla" path="res://scripts/flower.gd" id="3_0bbpv"]
-
-[sub_resource type="GDScript" id="GDScript_0bbpv"]
 
 [sub_resource type="Environment" id="Environment_0bbpv"]
 background_mode = 1
@@ -15,7 +14,7 @@ reflected_light_source = 1
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0.00023769, -0.000261715, -0.000237659, 1, 0.000149837, 0.000261743, -0.000149787, 1, 0, 0, 0)
-script = SubResource("GDScript_0bbpv")
+script = ExtResource("1_rarhs")
 
 [node name="Gui" parent="." instance=ExtResource("1_rvslj")]
 
