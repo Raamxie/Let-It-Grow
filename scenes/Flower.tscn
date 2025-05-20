@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c64k806i1ta3x"]
+
+[ext_resource type="PackedScene" uid="uid://dyx72jepjlfir" path="res://assets/models/Flowerpot/flowerpot.glb" id="1_8x8dx"]
+
+[node name="Flower" type="Node3D"]
+
+[node name="flowerpot" parent="." instance=ExtResource("1_8x8dx")]
