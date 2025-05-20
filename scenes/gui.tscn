@@ -131,6 +131,7 @@ size_flags_stretch_ratio = 8.87
 text = "Zaznamenat vodu"
 
 [node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 offset_left = 204.0
 offset_top = 65.0
 offset_right = 1771.0
