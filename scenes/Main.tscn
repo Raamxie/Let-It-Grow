@@ -1,18 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://vmfekgreliu5"]
+[gd_scene load_steps=5 format=3 uid="uid://vmfekgreliu5"]
 
 [ext_resource type="PackedScene" uid="uid://dvolddoyr8mpj" path="res://scenes/gui.tscn" id="1_rvslj"]
-[ext_resource type="PackedScene" uid="uid://b2rj8yrw5kbsv" path="res://scenes/Flower.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://c64k806i1ta3x" path="res://scenes/flower.tscn" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://c0pdiwij4arla" path="res://scripts/flower.gd" id="3_0bbpv"]
+
+[sub_resource type="GDScript" id="GDScript_0bbpv"]
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0.00023769, -0.000261715, -0.000237659, 1, 0.000149837, 0.000261743, -0.000149787, 1, 0, 0, 0)
+script = SubResource("GDScript_0bbpv")
 
 [node name="Gui" parent="." instance=ExtResource("1_rvslj")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 4.75848e-09, 8.96398e-09, 2.98428e-13, 0.940881, 0.338738, 0, -0.338738, 0.940881, 0.126688, 4.00279, 7.31917)
+transform = Transform3D(-0.998992, 0.00507644, -0.0446077, -0.0153639, 0.89494, 0.445922, 0.0421849, 0.446158, -0.89396, -1.88743, 24.8106, -42.8638)
 keep_aspect = 0
 current = true
-fov = 45.5
+fov = 20.1
 size = 0.081
 
 [node name="Flower" parent="." instance=ExtResource("2_rvslj")]
+script = ExtResource("3_0bbpv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.010491, 0.984029, -0.1777, 0.0579086, 0.17801, 0.982323, 0.998267, 1.5192e-05, -0.0588513, -7.68312, 4.68613, -6.72742)
+light_energy = 2.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 8.24696e-09, 7.71252e-09, -5.78382e-11, 1, 1.22091e-08, -1.16415e-10, 0, 1, 1.21341, 2.00442, -1.73723)
+omni_range = 220.741

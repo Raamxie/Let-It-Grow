@@ -1,11 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2rj8yrw5kbsv"]
+[gd_scene load_steps=2 format=3 uid="uid://c64k806i1ta3x"]
 
-[ext_resource type="PackedScene" uid="uid://cgcb83qsupgx5" path="res://assets/models/Flowerpot/flowerpot.blend" id="1_n3sah"]
+[ext_resource type="PackedScene" uid="uid://dyx72jepjlfir" path="res://assets/models/Flowerpot/flowerpot.glb" id="1_8x8dx"]
 
 [node name="Flower" type="Node3D"]
 
-[node name="flowerpot" parent="." instance=ExtResource("1_n3sah")]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.997129, 0, 0.0757271, 0, 1, 0, -0.0757271, 0, 0.997129, 0, 0, 0)
-shadow_enabled = true
+[node name="flowerpot" parent="." instance=ExtResource("1_8x8dx")]

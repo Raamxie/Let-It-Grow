@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ikldws3unncx"]
+
+[ext_resource type="PackedScene" uid="uid://dadx8n2mseq43" path="res://assets/models/Flowerpot/bamboo.glb" id="1_efsgn"]
+
+[node name="bamboo" instance=ExtResource("1_efsgn")]

@@ -34,3 +34,7 @@ import/blender/enabled=false
 animation_library={
 &"blender/nodes/visible": 1
 }
+
+[rendering]
+
+anti_aliasing/quality/use_taa=true
