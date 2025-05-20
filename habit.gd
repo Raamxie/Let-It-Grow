@@ -18,9 +18,10 @@ func init(_name:String, _description:String = "", _goal:float = 1) -> Habit:
 	is_completed = false
 	last_completed = _normalize_unix(0)
 	completed_part = 0
+	goal = _goal
 	return self
 
-func complete_habit(part:int = 1) -> void:		# if someone completes a habit, trigger this		**STREAK IMPLEMENTED
+func complete_habit(part:float = 1.0) -> void:		# if someone completes a habit, trigger this		**STREAK IMPLEMENTED
 	completed_part += part
 	if completed_part >= goal:
 		is_completed = true
