@@ -1,5 +1,5 @@
 extends PanelContainer
-
+class_name UIElement
 
 func _show():
 	self.visible = true 
