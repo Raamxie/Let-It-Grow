@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvolddoyr8mpj"]
+[gd_scene load_steps=14 format=3 uid="uid://dvolddoyr8mpj"]
 
 [ext_resource type="Script" uid="uid://cm6nttewuwl68" path="res://scripts/ui_element.gd" id="1_efmwq"]
+[ext_resource type="Script" uid="uid://jfio22e4ur50" path="res://scripts/grow_button.gd" id="1_ynd5l"]
+[ext_resource type="PackedScene" uid="uid://qs34pm8ry453" path="res://scenes/water_preset.tscn" id="2_mfius"]
 
 [sub_resource type="Image" id="Image_efmwq"]
 data = {
@@ -72,6 +74,13 @@ offset_left = 76.0
 offset_top = 43.0
 offset_right = 1874.0
 offset_bottom = 177.0
+
+[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Grow up"
+script = ExtResource("1_ynd5l")
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
 texture_filter = 1
@@ -162,17 +171,8 @@ layout_mode = 2
 size_flags_vertical = 3
 columns = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer"]
+[node name="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("2_mfius")]
 layout_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer"]
-layout_mode = 2
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer"]
-layout_mode = 2
-text = "Yatta"
-horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(720, 0)
@@ -181,13 +181,20 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.85
 alignment = 2
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 6
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 placeholder_text = "Zadajte si kolko chcete"
@@ -202,3 +209,4 @@ size_flags_stretch_ratio = 5.09
 [connection signal="toggled" from="CanvasLayer/TextureButton" to="CanvasLayer/PanelContainer" method="_set_visibility"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/Button" to="CanvasLayer/PanelContainer" method="_hide"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/Button" to="CanvasLayer/PanelContainer2" method="_show"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer2/HBoxContainer/VBoxContainer2/VBoxContainer2/Button" to="CanvasLayer/PanelContainer2" method="_hide"]

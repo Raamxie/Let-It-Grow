@@ -111,6 +111,7 @@ func setup_ui():
 	save_button.text = "Save and Continue"
 	save_button.custom_minimum_size.y = 40
 	save_button.pressed.connect(save_user_preferences)
+	save_button.pressed.connect(load_next_level)
 	vbox.add_child(save_button)
 
 func create_input_field(label_text: String, data_key: String) -> HBoxContainer:
@@ -190,3 +191,6 @@ func apply_water_recommendation():
 	var recommended_water = weight * multiplier
 	water_input.text = "%.1f" % recommended_water
 	print("Water recommendation applied: %.1f L" % recommended_water)
+	
+func load_next_level():
+	get_tree().change_scene_to_file("res://scenes/Main.tscn")
